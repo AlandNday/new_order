@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "987512099900",
+    "project_id": "neworder-c5d5c",
+    "storage_bucket": "neworder-c5d5c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987512099900:android:34095823848cac23f6df39",
+        "android_client_info": {
+          "package_name": "SE.new_order"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987512099900-apneo6ob9glv9u2hhvhncm8atou9v6pd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTgYc5yClsG6b8jDVgKlHhWiGiww3lt3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987512099900-apneo6ob9glv9u2hhvhncm8atou9v6pd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "987512099900-q8jl95ltm0du9bc5ejerigh9ms823mr2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "SE.newOrder"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
