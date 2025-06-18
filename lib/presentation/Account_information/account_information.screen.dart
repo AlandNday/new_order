@@ -87,7 +87,9 @@ class AccountInformationScreen extends GetView<AccountInformationController> {
 
             // Posisi (Position) Field
             Obx(
-              () => controller.userProfile.value?.role == 'admin'
+              () =>
+                  controller.userProfile.value?.role == 'admin' ||
+                      controller.userProfile.value?.role == 'role'
                   ? _buildInfoDisplay(
                       label: 'Posisi',
                       value:

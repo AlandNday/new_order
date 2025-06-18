@@ -126,5 +126,10 @@ class Nav {
       page: () => const ProfileeditorScreen(),
       binding: ProfileeditorControllerBinding(),
     ),
+    GetPage(
+      name: Routes.INCOME_SUMMARY,
+      page: () => const IncomeSummaryScreen(),
+      binding: IncomeSummaryControllerBinding(),
+    ),
   ];
 }

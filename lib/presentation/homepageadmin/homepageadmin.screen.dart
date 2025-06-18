@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:new_order/infrastructure/navigation/routes.dart';
+import 'package:new_order/presentation/IncomeSummary/controllers/income_summary.controller.dart';
 import 'package:new_order/presentation/announcement/controllers/announcement.controller.dart';
 import 'package:new_order/presentation/screens.dart';
 
@@ -16,6 +17,10 @@ class HomepageadminScreen extends GetView<HomepageadminController> {
     final AdminordersScreen adminordersScreen = Get.find<AdminordersScreen>();
     final AnnouncementController announcementController =
         Get.find<AnnouncementController>();
+    final IncomeSummaryController incomesummarycontroller =
+        Get.find<IncomeSummaryController>();
+    final IncomeSummaryScreen incomesummaryScreen =
+        Get.find<IncomeSummaryScreen>();
 
     return Scaffold(
       backgroundColor: Colors.grey[100], // Light grey background
@@ -77,8 +82,61 @@ class HomepageadminScreen extends GetView<HomepageadminController> {
                   ],
                 ),
               ),
-              const SizedBox(height: 30),
-
+              Visibility(
+                visible: controller.userProfile.value?.role == 'owner',
+                child: SizedBox(height: 30),
+              ),
+              Visibility(
+                visible: controller.userProfile.value?.role == 'owner',
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Pendapatan',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[800],
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Get.toNamed(Routes.INCOME_SUMMARY);
+                        },
+                        child: Text(
+                          'More',
+                          style: TextStyle(
+                            color: Colors.blueAccent,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Visibility(
+                visible: controller.userProfile.value?.role == 'owner',
+                child: SizedBox(height: 15),
+              ),
+              Visibility(
+                visible: controller.userProfile.value?.role == 'owner',
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: incomesummaryScreen.buildChartCard(
+                    title: 'Pendapatan 7 Hari Terakhir ',
+                    child: Obx(
+                      () => incomesummaryScreen.buildBarChart(
+                        incomesummarycontroller.historicalDailyIncome.value,
+                        'daily',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 15),
               // --- Pengumuman (Announcement) Section ---
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),

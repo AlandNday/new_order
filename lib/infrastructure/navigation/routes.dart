@@ -20,9 +20,10 @@ class Routes {
   static const LOG_IN = '/log-in';
   static const MENU = '/menu';
   static const PROFILE = '/profile';
+  static const PROFILEEDITOR = '/profileeditor';
   static const REVIEW = '/review';
   static const SHOPMENU = '/shopmenu';
   static const SIGN_UP = '/sign-up';
   static const TRANSACTIONHISTORY = '/transactionhistory';
-  static const PROFILEEDITOR = '/profileeditor';
+  static const INCOME_SUMMARY = '/income-summary';
 }

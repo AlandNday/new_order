@@ -63,7 +63,8 @@ class LogInController extends GetxController {
     };
 
     logger.d('User role: ${currentProfile.value?.role}');
-    if (currentProfile.value?.role == "admin") {
+    if (currentProfile.value?.role == "admin" ||
+        currentProfile.value?.role == "owner") {
       Get.offAllNamed(
         Routes.ADMINNAVBAR,
         arguments: args,

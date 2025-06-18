@@ -4,17 +4,19 @@ import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get_storage/get_storage.dart'; // Import GetStorage
+import 'package:intl/date_symbol_data_local.dart';
 
 import 'package:new_order/firebase_options.dart';
 import 'package:new_order/infrastructure/navigation/navigation.dart';
 import 'package:new_order/infrastructure/navigation/routes.dart';
 
 void main() async {
+  await initializeDateFormatting('id_ID', null);
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await GetStorage.init(); // Initialize GetStorage
 
-  String initialRoute = Routes.LOG_IN; // Default to login route
+  String initialRoute = Routes.HOME; // Default to login route
   final box = GetStorage(); // Create an instance of GetStorage
 
   User? currentUser = FirebaseAuth.instance.currentUser;
@@ -44,7 +46,7 @@ void main() async {
         String? role =
             userData['role'] as String?; // Assuming 'role' field in Firestore
 
-        if (role == 'admin') {
+        if (role == 'admin' || role == 'owner') {
           initialRoute =
               Routes.ADMINNAVBAR; // Define your admin bottom nav bar route
           print('User is admin. Redirecting to admin dashboard.');

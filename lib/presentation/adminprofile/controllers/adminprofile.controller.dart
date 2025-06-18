@@ -68,7 +68,7 @@ class AdminprofileController extends GetxController {
       }
 
       // Close the loading indicator
-      Get.offAllNamed(Routes.LOG_IN); //
+      Get.offAllNamed(Routes.HOME); //
 
       // IMPORTANT: Your AuthController or main.dart's AuthGate (StreamBuilder)
       // will automatically detect this signOut and navigate back to the login screen.

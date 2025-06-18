@@ -11,6 +11,7 @@ export 'package:new_order/infrastructure/navigation/bindings/controllers/home.co
 export 'package:new_order/infrastructure/navigation/bindings/controllers/homepage.controller.binding.dart';
 export 'package:new_order/infrastructure/navigation/bindings/controllers/homepageadmin.controller.binding.dart'; 
 export 'package:new_order/infrastructure/navigation/bindings/controllers/homepagenavbar.controller.binding.dart'; 
+export 'package:new_order/infrastructure/navigation/bindings/controllers/income_summary.controller.binding.dart'; 
 export 'package:new_order/infrastructure/navigation/bindings/controllers/log_in.controller.binding.dart';
 export 'package:new_order/infrastructure/navigation/bindings/controllers/profile.controller.binding.dart'; 
 export 'package:new_order/infrastructure/navigation/bindings/controllers/profileeditor.controller.binding.dart'; 

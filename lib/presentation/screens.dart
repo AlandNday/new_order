@@ -3,6 +3,7 @@ export 'package:new_order/presentation/BottomNavBar/bottom_nav_bar.screen.dart';
 export 'package:new_order/presentation/Cart/cart.screen.dart';
 export 'package:new_order/presentation/Forgot_Password/forgot_password.screen.dart';
 export 'package:new_order/presentation/Homepage/homepage.screen.dart';
+export 'package:new_order/presentation/IncomeSummary/income_summary.screen.dart';
 export 'package:new_order/presentation/Shopmenu/shopmenu.screen.dart';
 export 'package:new_order/presentation/Sign_Up/sign_up.screen.dart';
 export 'package:new_order/presentation/adminnavbar/adminnavbar.screen.dart';
